@@ -14,7 +14,6 @@ services:
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/app
       - static_data:/vol/web/static
       - media_data:/vol/web/media
     depends_on:
@@ -28,7 +27,7 @@ services:
     env_file:
       - .env
     volumes:
-      - postgres_db_data:$PGDATA
+      - postgres_db_data:/var/lib/postgresql/data
 
 volumes:
   postgres_db_data:
