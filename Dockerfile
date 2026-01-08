@@ -1,4 +1,4 @@
-FROM python:3.13.5-slim
+FROM python:3.12-slim
 LABEL maintainer="mr.maddarknes@gmail.com"
 
 ENV PYTHONDONTWRITEBYTECODE 1
